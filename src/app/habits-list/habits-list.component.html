@@ -1,3 +1,6 @@
-<p>habits works!</p>
-<p>Initial commit! Tudo tem que começar de algum lugar né?</p>
-<p>aqui deve ir a lista de hábitos</p>
+<h1>Meus Hábitos</h1>
+<ul>
+    <li *ngFor="let habit of habits">
+        <habit-displayer [habit]="habit"></habit-displayer>
+    </li>
+</ul>
