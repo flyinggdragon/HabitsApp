@@ -1,0 +1,53 @@
+* {
+    font-size: 115%;
+}
+
+.habits-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.habit-details {
+    border-collapse: collapse;
+    width: 75%;
+    height: 60px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.habit-details td {
+    border: 1px solid rgb(43, 43, 43);
+}
+
+.habit-name, .habit-place {
+    padding-left: 20px;
+    width: 80%;
+    text-align: left;
+}
+
+.habit-time, .habit-periodic {
+    width: 50%;
+    text-align: center;
+}
+
+.habit-actions {
+    border-collapse: collapse;
+    width: 3%;
+    height: 60px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.habit-actions td {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgb(43, 43, 43);
+}
+
+.edit-icon, .delete-icon {
+    cursor: pointer;
+}

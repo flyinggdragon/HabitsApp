@@ -1,7 +1,24 @@
-<div class="habit">
-    <h3>{{ habit.name }}</h3>
-    <p>Horário: {{ habit.time }}</p>
-    <p>Data: {{ habit.date }}</p>
-    <p>Local: {{ habit.place }}</p>
-    <p>Periódico: {{ habit.periodic ? 'Sim' : 'Não' }}</p>
+<div class="habits-container">
+    <table class="habit-details">
+        <tbody>
+            <tr>
+                <td class="habit-name">🎨 {{habit.name}}</td>
+                <td class="habit-time">{{habit.startTime}}</td>
+            </tr>
+            <tr>
+                <td class="habit-place">📍 {{habit.place}}</td>
+                <td class="habit-periodic">P: {{habit.periodic}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="habit-actions">
+        <tbody>
+            <tr>
+                <td class="edit-icon">✏️</td>
+            </tr>
+            <tr>
+                <td class="delete-icon" (click)="onDelete()">❌</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

@@ -1,6 +1,9 @@
 <h1>Meus Hábitos</h1>
 <ul>
     <li *ngFor="let habit of habits">
-        <habit-displayer [habit]="habit"></habit-displayer>
+        <habit-displayer 
+            [habit]="habit" 
+            (deleteHabit)="onDeleteHabit(habit)">
+        </habit-displayer>
     </li>
 </ul>

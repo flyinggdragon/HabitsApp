@@ -1,15 +1,19 @@
 export class Habit {
     name: string;
-    time: string; // Mudar para tipo de dado adequado depois
-    date: string; // Mudar para tipo de dado adequado depois
+    startTime: string;
+    startDate: string;
     place: string;
     periodic: boolean;
+    endTime?:string;
+    endDate?:string;
 
-    constructor(name: string, time: string, date: string, place: string, periodic: boolean) {
+    constructor(name: string, startTime: string, startDate: string, place: string, periodic: boolean, endTime?: string, endDate?: string) {
         this.name = name;
-        this.time = time;
-        this.date = date;
-        this.place = place;
+        this.startTime = startTime;
+        this.startDate = startDate;
+        this.place = place,
         this.periodic = periodic;
+        this.endTime = endTime;
+        this.endDate = endDate;
     }
 }
