@@ -1,9 +1,24 @@
 <h1>Meus Hábitos</h1>
-<ul>
-    <li *ngFor="let habit of habits">
-        <habit-displayer 
-            [habit]="habit" 
-            (deleteHabit)="onDeleteHabit(habit)">
-        </habit-displayer>
-    </li>
-</ul>
+<h2>
+    Exibição
+    <select [(ngModel)]="selectedView" class="view-selector">
+        <option value="all-habits">Todos os hábitos</option>
+        <option value="daily-habits">Hábitos Diários</option>
+        <option value="habit-schedule">Quadro de Hábitos</option>
+    </select>
+</h2>
+
+<div *ngIf = "selectedView === 'all-habits'">
+    <all-habits-list 
+        [habits]="habits" 
+        (deleteHabit)="onDeleteHabit($event)">
+    </all-habits-list>
+</div>
+
+<div *ngIf = "selectedView === 'daily-habits'">
+    <daily-habits></daily-habits>
+</div>
+
+<div *ngIf = "selectedView === 'habit-schedule'">
+    <habit-schedule></habit-schedule>
+</div>
