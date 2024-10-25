@@ -3,7 +3,7 @@
         <tbody>
             <tr>
                 <td class="habit-name">🎨 {{habit.name}}</td>
-                <td class="habit-time">{{habit.startTime}}</td>
+                <td class="habit-time">{{habit.startDate | date: 'HH:mm'}}</td>
             </tr>
             <tr>
                 <td class="habit-place">📍 {{habit.place}}</td>

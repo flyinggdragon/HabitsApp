@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Habit } from '../habit';
+import { Habit } from '../../classes/habit';
 
 @Component({
   selector: 'habit-displayer',

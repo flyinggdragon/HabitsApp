@@ -8,6 +8,7 @@ import { HabitsListComponent } from './habits-list/habits-list.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HabitDisplayerComponent } from './habits-list/habit-displayer/habit-displayer.component';
+import { AllHabitsListComponent } from './all-habits-list/all-habits-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HabitDisplayerComponent } from './habits-list/habit-displayer/habit-dis
     HabitsListComponent,
     HomeComponent,
     NotFoundComponent,
-    HabitDisplayerComponent
+    HabitDisplayerComponent,
+    AllHabitsListComponent
   ],
   imports: [
     BrowserModule,
