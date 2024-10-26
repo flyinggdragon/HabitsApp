@@ -11,9 +11,9 @@ export class HabitDisplayerComponent implements OnInit {
     @Input() habit!: Habit;
     @Output() deleteHabit = new EventEmitter<Habit>();
 
-    ngOnInit() {}
+    ngOnInit(): void {}
 
-    onDelete() {
+    onDelete(): void {
         this.deleteHabit.emit(this.habit);
     }
 }

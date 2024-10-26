@@ -1,1 +1,14 @@
-<p>daily-habits works!</p>
+<h1>
+    <button (click)="changeDay(false)"><</button>
+    {{ dateToString() }}
+    <button (click)="changeDay(true)">></button>
+</h1>
+<ul>
+    <p *ngIf="todaysHabits.length == 0">Nenhum hábito programado para hoje. Gostaria de adicionar um novo?</p>
+    <li *ngFor="let habit of todaysHabits">
+        <habit-displayer 
+            [habit]="habit" 
+            (deleteHabit)="onDelete(habit)">
+        </habit-displayer>
+    </li>
+</ul>

@@ -3,11 +3,11 @@
         <tbody>
             <tr>
                 <td class="habit-name">🎨 {{habit.name}}</td>
-                <td class="habit-time">{{habit.startDate | date: 'HH:mm'}}</td>
+                <td class="habit-date">{{habit.startDate | date: 'dd/MM/yyyy'}}</td>
             </tr>
             <tr>
                 <td class="habit-place">📍 {{habit.place}}</td>
-                <td class="habit-periodic">P: {{habit.periodic}}</td>
+                <td class="habit-time">{{habit.startDate | date: 'HH:mm'}}</td>
             </tr>
         </tbody>
     </table>

@@ -10,7 +10,7 @@ export class AllHabitsListComponent {
     @Input() habits: Habit[] = [];
     @Output() deleteHabit = new EventEmitter<Habit>();
 
-    onDelete(habit: Habit) {
+    public onDelete(habit: Habit): void {
         this.deleteHabit.emit(habit);
     }
 }
