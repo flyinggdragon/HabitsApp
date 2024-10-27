@@ -1,3 +1,33 @@
 * {
     text-align: center;
 }
+
+nav {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tab-container {
+    display: flex;
+    border: 1px solid #000;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    font-size: 16px;
+}
+
+button:not(:last-child) {
+    border-right: 1px solid #000;
+}
+
+button.active {
+    background-color: #777;
+    color: #fff;
+    font-weight: bold;
+}

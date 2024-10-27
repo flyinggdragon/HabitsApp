@@ -40,6 +40,10 @@ import { HabitScheduleComponent } from './habits-list/habit-schedule/habit-sched
         {
             path: 'habits-list',
             component: HabitsListComponent
+        },
+        {
+            path: '**',
+            component: NotFoundComponent
         }
     ])
   ],

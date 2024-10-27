@@ -1,11 +1,23 @@
 <h1>Meus Hábitos</h1>
 <h2>
-    Exibição
-    <select [(ngModel)]="selectedView" class="view-selector">
-        <option value="all-habits">Todos os hábitos</option>
-        <option value="daily-habits">Hábitos Diários</option>
-        <option value="habit-schedule">Quadro de Hábitos</option>
-    </select>
+    Exibição de Hábitos:
+    <nav class="tab-container">
+        <button 
+            [ngClass]="{'active': selectedView === 'all-habits'}" 
+            (click)="selectedView = 'all-habits'">
+            Todos
+        </button>
+        <button 
+            [ngClass]="{'active': selectedView === 'daily-habits'}" 
+            (click)="selectedView = 'daily-habits'">
+            Diários
+        </button>
+        <button 
+            [ngClass]="{'active': selectedView === 'habit-schedule'}" 
+            (click)="selectedView = 'habit-schedule'">
+            Quadro
+        </button>
+    </nav>
 </h2>
 
 <div *ngIf = "selectedView === 'all-habits'">
