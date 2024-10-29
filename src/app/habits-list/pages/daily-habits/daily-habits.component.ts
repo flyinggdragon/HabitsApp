@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Habit } from '../../classes/habit';
+import { Habit } from '../../../classes/habit';
 
 @Component({
     selector: 'daily-habits',
@@ -12,7 +12,7 @@ export class DailyHabitsComponent implements OnInit {
     currentDate!: Date;
 
     @Input() habits: Habit[] = [];
-    @Output() deleteHabit = new EventEmitter<Habit>();
+    @Output() deleteHabit: EventEmitter<Habit> = new EventEmitter<Habit>();
 
     ngOnInit(): void {
         this.today = new Date();
@@ -33,7 +33,6 @@ export class DailyHabitsComponent implements OnInit {
         if (forward) {
             this.currentDate.setDate(this.currentDate.getDate() + 1);
         } else {
-            if (this.isSameDate(this.today, this.currentDate)) return;
             this.currentDate.setDate(this.currentDate.getDate() - 1);
         }
     }

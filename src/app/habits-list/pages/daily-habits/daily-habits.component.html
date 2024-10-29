@@ -4,7 +4,7 @@
     <button (click)="changeDay(true)">></button>
 </h1>
 <ul>
-    <p *ngIf="todaysHabits.length == 0">Nenhum hábito programado para hoje. Gostaria de adicionar um novo?</p>
+    <p *ngIf="todaysHabits.length == 0">Nenhum hábito programado para hoje.</p>
     <li *ngFor="let habit of todaysHabits">
         <habit-displayer 
             [habit]="habit" 

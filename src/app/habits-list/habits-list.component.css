@@ -31,3 +31,9 @@ button.active {
     color: #fff;
     font-weight: bold;
 }
+
+add-button {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}

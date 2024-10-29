@@ -1,45 +1,35 @@
 <h1>Meus Hábitos</h1>
-<h2>
-    Exibição de Hábitos:
-    <nav class="tab-container">
-        <button 
-            [ngClass]="{'active': selectedView === 'all-habits'}" 
-            (click)="selectedView = 'all-habits'">
-            Todos
-        </button>
-        <button 
-            [ngClass]="{'active': selectedView === 'daily-habits'}" 
-            (click)="selectedView = 'daily-habits'">
-            Diários
-        </button>
-        <button 
-            [ngClass]="{'active': selectedView === 'habit-schedule'}" 
-            (click)="selectedView = 'habit-schedule'">
-            Quadro
-        </button>
-    </nav>
-</h2>
 
-<div *ngIf = "selectedView === 'all-habits'">
-    <all-habits-list 
-        [habits]="habits" 
-        (deleteHabit)="onDeleteHabit($event)">
-    </all-habits-list>
-</div>
+<div class="container">
+    <h2>
+        Exibição de Hábitos:
+        <nav class="tab-container">
+            <button 
+                [ngClass]="{'active': selectedView === 'all-habits'}" 
+                (click)="selectedView = 'all-habits'">
+                Todos
+            </button>
+            <button 
+                [ngClass]="{'active': selectedView === 'daily-habits'}" 
+                (click)="selectedView = 'daily-habits'">
+                Diários
+            </button>
+        </nav>
+    </h2>
+    
+    <add-button (habitAdded)="addHabit($event)"></add-button>
 
-<div *ngIf = "selectedView === 'daily-habits'">
-    <daily-habits
-        [habits]="habits"
-        (deleteHabit)="onDeleteHabit($event)">
-    </daily-habits>
-</div>
+    <div *ngIf="selectedView === 'all-habits'">
+        <all-habits-list 
+            [habits]="habits" 
+            (deleteHabit)="onDeleteHabit($event)">
+        </all-habits-list>
+    </div>
 
-<div *ngIf = "selectedView === 'habit-schedule'">
-    <p>Habit Schedule</p>
-    <!--
-    <habit-schedule
-        [habits]="habits"
-        (deleteHabit)="onDeleteHabit($event)">
-    </habit-schedule>
-    -->
+    <div *ngIf="selectedView === 'daily-habits'">
+        <daily-habits
+            [habits]="habits"
+            (deleteHabit)="onDeleteHabit($event)">
+        </daily-habits>
+    </div>
 </div>

@@ -28,6 +28,11 @@ export class HabitsListComponent implements OnInit {
         ];
     }
 
+    public addHabit(newHabit: Habit): void {
+        // Chamada para a API aqui, para adicionar hábitos do BD.
+        this.habits.push(newHabit);
+    }
+
     public onDeleteHabit(habit: Habit): void {
         // Outra chamada para a API aqui, para excluir hábitos do BD.
         this.habits = this.habits.filter(h => h !== habit);

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HabitScheduleComponent } from './habit-schedule.component';
+import { AddButtonComponent } from './add-button.component';
 
-describe('HabitScheduleComponent', () => {
-  let component: HabitScheduleComponent;
-  let fixture: ComponentFixture<HabitScheduleComponent>;
+describe('AddButtonComponent', () => {
+  let component: AddButtonComponent;
+  let fixture: ComponentFixture<AddButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HabitScheduleComponent ]
+      declarations: [ AddButtonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HabitScheduleComponent);
+    fixture = TestBed.createComponent(AddButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
