@@ -22,14 +22,16 @@
     <div *ngIf="selectedView === 'all-habits'">
         <all-habits-list 
             [habits]="habits" 
-            (deleteHabit)="onDeleteHabit($event)">
+            (deleteHabit)="onDeleteHabit($event)"
+            (editHabit)="onEditHabit($event)">
         </all-habits-list>
     </div>
 
     <div *ngIf="selectedView === 'daily-habits'">
         <daily-habits
             [habits]="habits"
-            (deleteHabit)="onDeleteHabit($event)">
+            (deleteHabit)="onDeleteHabit($event)"
+            (editHabit)="onEditHabit($event)">
         </daily-habits>
     </div>
 </div>

@@ -8,7 +8,8 @@
     <li *ngFor="let habit of todaysHabits">
         <habit-displayer 
             [habit]="habit" 
-            (deleteHabit)="onDelete(habit)">
+            (editHabit)="onEdit($event)"
+            (deleteHabit)="onDelete($event)">
         </habit-displayer>
     </li>
 </ul>

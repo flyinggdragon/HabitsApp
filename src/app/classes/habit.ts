@@ -4,6 +4,7 @@ export class Habit {
         public startDate: Date,
         public place: string,
         public periodic: boolean,
-        public endDate?: Date
+        public endDate?: Date,
+        public id?: number,
     ) {}
 }

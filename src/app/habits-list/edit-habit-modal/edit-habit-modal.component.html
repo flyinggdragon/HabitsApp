@@ -1,0 +1,16 @@
+<div class="modal-overlay">
+    <div class="modal-content">
+        <h2>Criar Novo Hábito</h2>
+        <input [(ngModel)]="habitName" placeholder="Nome do Hábito">
+        <input [(ngModel)]="habitStartDate" type="datetime-local">
+        <input [(ngModel)]="habitPlace" placeholder="Localização">
+        <label>
+            <input type="checkbox" [(ngModel)]="habitPeriodic"> É Recorrente?
+        </label>
+
+        <div>
+            <button (click)="editHabit()">Confirmar</button>
+            <button (click)="closeModal()">Cancelar</button>
+        </div>
+    </div>
+</div>

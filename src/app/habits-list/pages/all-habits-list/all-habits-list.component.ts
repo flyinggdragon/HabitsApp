@@ -9,8 +9,13 @@ import { Habit } from '../../../classes/habit';
 export class AllHabitsListComponent {
     @Input() habits: Habit[] = [];
     @Output() deleteHabit = new EventEmitter<Habit>();
+    @Output() editHabit = new EventEmitter<Habit>();
 
     public onDelete(habit: Habit): void {
         this.deleteHabit.emit(habit);
+    }
+
+    public onEdit(habit: Habit): void {
+        this.editHabit.emit(habit);
     }
 }

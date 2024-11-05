@@ -16,6 +16,7 @@ import { LoggedHomeComponent } from './logged-home/logged-home.component';
 import { AddButtonComponent } from './habits-list/add-button/add-button.component';
 import { CreateHabitModalComponent } from './habits-list/create-habit-modal/create-habit-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditHabitModalComponent } from './habits-list/edit-habit-modal/edit-habit-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoggedHomeComponent,
     AddButtonComponent,
     CreateHabitModalComponent,
+    EditHabitModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,8 @@ export class DailyHabitsComponent implements OnInit {
     currentDate!: Date;
 
     @Input() habits: Habit[] = [];
-    @Output() deleteHabit: EventEmitter<Habit> = new EventEmitter<Habit>();
+    @Output() deleteHabit = new EventEmitter<Habit>();
+    @Output() editHabit = new EventEmitter<Habit>();
 
     ngOnInit(): void {
         this.today = new Date();
@@ -47,5 +48,12 @@ export class DailyHabitsComponent implements OnInit {
 
     public onDelete(habit: Habit): void {
         this.deleteHabit.emit(habit);
+    }
+
+    public onEdit(editedHabit: Habit): void {
+        const index = this.habits.findIndex(habit => habit.name === editedHabit.name);
+        if (index !== -1) {
+            this.editHabit.emit(editedHabit);
+        }
     }
 }
