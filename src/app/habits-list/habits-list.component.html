@@ -1,37 +1,45 @@
-<h1>Meus Hábitos</h1>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
 
-<div class="container">
-    <h2>
-        Exibição de Hábitos:
-        <nav class="tab-container">
-            <button 
-                [ngClass]="{'active': selectedView === 'all-habits'}" 
-                (click)="selectedView = 'all-habits'">
-                Todos
-            </button>
-            <button 
-                [ngClass]="{'active': selectedView === 'daily-habits'}" 
-                (click)="selectedView = 'daily-habits'">
-                Diários
-            </button>
-        </nav>
-    </h2>
-    
-    <add-button (habitAdded)="addHabit($event)"></add-button>
+<body>
+    <h1>Meus Hábitos</h1>
 
-    <div *ngIf="selectedView === 'all-habits'">
-        <all-habits-list 
-            [habits]="habits" 
-            (deleteHabit)="onDeleteHabit($event)"
-            (editHabit)="onEditHabit($event)">
-        </all-habits-list>
+    <div class="container">
+        <h2>
+            Exibição de Hábitos:
+            <nav class="tab-container">
+                <button 
+                    [ngClass]="{'active': selectedView === 'all-habits'}" 
+                    (click)="selectedView = 'all-habits'">
+                    Todos
+                </button>
+                <button 
+                    [ngClass]="{'active': selectedView === 'daily-habits'}" 
+                    (click)="selectedView = 'daily-habits'">
+                    Diários
+                </button>
+            </nav>
+        </h2>
+        
+        <add-button (habitAdded)="addHabit($event)"></add-button>
+
+        <div *ngIf="selectedView === 'all-habits'">
+            <all-habits-list 
+                [habits]="habits" 
+                (deleteHabit)="onDeleteHabit($event)"
+                (editHabit)="onEditHabit($event)">
+            </all-habits-list>
+        </div>
+
+        <div *ngIf="selectedView === 'daily-habits'">
+            <daily-habits
+                [habits]="habits"
+                (deleteHabit)="onDeleteHabit($event)"
+                (editHabit)="onEditHabit($event)">
+            </daily-habits>
+        </div>
     </div>
-
-    <div *ngIf="selectedView === 'daily-habits'">
-        <daily-habits
-            [habits]="habits"
-            (deleteHabit)="onDeleteHabit($event)"
-            (editHabit)="onEditHabit($event)">
-        </daily-habits>
-    </div>
-</div>
+</body>

@@ -17,6 +17,9 @@ import { AddButtonComponent } from './habits-list/add-button/add-button.componen
 import { CreateHabitModalComponent } from './habits-list/create-habit-modal/create-habit-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditHabitModalComponent } from './habits-list/edit-habit-modal/edit-habit-modal.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { EditHabitModalComponent } from './habits-list/edit-habit-modal/edit-hab
     AddButtonComponent,
     CreateHabitModalComponent,
     EditHabitModalComponent,
+    RegisterComponent,
+    LoginComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,15 @@ import { EditHabitModalComponent } from './habits-list/edit-habit-modal/edit-hab
     RouterModule.forRoot([
         {
             path: '',
-            component: NotFoundComponent
+            component: HomeComponent
+        },
+        {
+            path: 'login',
+            component: LoginComponent
+        },
+        {
+            path: 'register',
+            component: RegisterComponent
         },
         {
             path: 'home',
