@@ -1,14 +1,16 @@
 .navbar {
     width: 100%;
-    background-color: #333; /* Escolha a cor de fundo que preferir */
+    background-color: #333;
     color: white;
     padding: 1rem 0;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
-    justify-content: center;
-    z-index: 1000; /* Garantir que fique acima de outros elementos */
+    justify-content: flex-start; /* Alinha a navbar à esquerda */
+    padding-left: 2rem; /* Espaço à esquerda para centralizar o conteúdo */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
 }
 
 /* Lista e itens da barra */
@@ -17,10 +19,12 @@
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espaçamento entre os itens */
 }
 
 .navbar-item {
-    margin-right: 2rem; /* Espaçamento entre as opções */
+    display: inline;
 }
 
 .navbar-link {
@@ -28,8 +32,14 @@
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Efeito hover nos links */
 .navbar-link:hover {
-    text-decoration: underline;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
 }

@@ -1,40 +1,91 @@
 * {
     font-family: "Jost";
     text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gpm8L217NcS4A49wKl1gFwaRJTqDNq-fdg&s');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+}
+
+.container {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 
 nav {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+    width: 60%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tab-container {
     display: flex;
-    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #777;
 }
 
 button {
     flex: 1;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: #f5f5f5;
+    padding: 12px;
     font-size: 16px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: #fff;
 }
 
 button:not(:last-child) {
-    border-right: 1px solid #000;
+    border-right: 1px solid #777;
 }
 
 button.active {
-    background-color: #777;
+    background-color: #0056b3;
     color: #fff;
     font-weight: bold;
 }
 
-add-button {
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
+all-habits-list, daily-habits {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
