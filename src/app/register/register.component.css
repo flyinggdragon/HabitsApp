@@ -1,0 +1,73 @@
+body {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gpm8L217NcS4A49wKl1gFwaRJTqDNq-fdg&s'); /* URL da imagem de fundo */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do formulário */
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos contêineres e inputs */
+.user-container,
+.password-container {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #777;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}

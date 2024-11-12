@@ -1,0 +1,46 @@
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gpm8L217NcS4A49wKl1gFwaRJTqDNq-fdg&s');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurecimento */
+}
+
+.home-content h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.home-buttons button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-buttons button:hover {
+    background-color: #555;
+}
